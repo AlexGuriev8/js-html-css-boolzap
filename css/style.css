@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* General */
+#all {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#top {
+    height: 125px;
+    width: 100%;
+    background: #009788;
+}
+
+#bottom {
+    height: calc(100vh - 125px);
+    background: #d6dbd7;
+}
+
+
+
+/* layout */
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 95vh;
+    min-width: 1440px;
+    background-color: white;
+}
+
+.sezione {
+    float: left;
+    height: 95vh;
+}
+
+.sezione.left {
+    width: 30%;
+    background: rgb(129, 129, 129);
+}
+
+.sezione.right{
+    width: 70%;
+}
+
+/* left */
+
+.top-container {
+    height: 65px;
+    background-color: #eaeaea;
+}
+
+.top-container.left {
+     border-right: 1.5px solid rgba(191,191,191,0.5);
+}
+
+.bottom-container.left {
+    height: calc(100% - 65px);
+    background: pink;
+}
+
+#notifiche {
+    height: 75px;
+    background: #8EDAFC;
+}
+
+#search-bar {
+    height: 50px;
+    background: #eaeaea;
+}
+
+#messaggi {
+    height: calc(100% - 125px);
+    overflow-y: auto;
+}
+
+/* rigth */
+#central-msg {
+    height: calc(100% - 80px - 65px);
+    overflow-y: auto;
+    background: #dfd6cf;
+}
+
+#footer {
+    height: 80px;
+    background: saddlebrown;
+}

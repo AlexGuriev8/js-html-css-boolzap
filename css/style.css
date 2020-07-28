@@ -244,12 +244,43 @@ main {
 
 #message-area {
     height: calc(100% - 120px);
-    background-color: seagreen;
+    overflow-y: scroll;
+}
+.chat-box {
+    height: 100%;
+    background-image: url(https://i.pinimg.com/originals/4d/ee/65/4dee65d05bdbe09c669afcecc9fd8b20.jpg);
+    background-size: cover;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
 }
 #chat-input {
     height: 60px;
-    background-color: #999898;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
 }
+#input-text {
+    height: 40px;
+    width: calc(100% - 140px);
+    border: none;
+    border-radius: 18px;
+    font-size: 16px;
+    padding: 0 15px
+}
+
+#input-text:focus {
+    outline: none;
+}
+#chat-input i {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+    padding: 0 5px;
+}
+
+
 
 /* media query */
 

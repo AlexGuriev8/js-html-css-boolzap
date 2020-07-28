@@ -4,97 +4,92 @@
     box-sizing: border-box;
 }
 
-.clearfix {
+.clearfix::after{
     content: "";
     display: table;
     clear: both;
 }
 
-/* General */
+
+
 #all {
-    width: 100vw;
     height: 100vh;
-    position: relative;
 }
 
-#top {
-    height: 125px;
-    width: 100%;
-    background: #009788;
+main {
+    height: 100%;
 }
-
-#bottom {
-    height: calc(100vh - 125px);
-    background: #d6dbd7;
-}
-
-
-
-/* layout */
 
 .container {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    height: 95vh;
-    min-width: 1440px;
-    background-color: white;
+    width: 100%;
+    height: 100%;
 }
 
-.sezione {
-    float: left;
-    height: 95vh;
-}
-
-.sezione.left {
+#account {
     width: 30%;
-    background: rgb(129, 129, 129);
+    height: 100%;
+    float: left;
+    background: red;
 }
 
-.sezione.right{
+#header-account {
+    width: 100%;
+    height: 60px;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: #ededed;  
+}
+
+#desktop-notifications {
+    background-color: #9de1fe;
+    height: 90px;
+    cursor: pointer;
+}
+
+#search {
+    height: 50px;
+    background: rgb(156, 34, 54);
+/*     background-color: #f7f7f7; */
+}
+
+#utenti {
+    height: calc(100% - 200px);
+    background-color: rgb(179, 105, 105);
+    overflow-y: scroll;
+}
+
+#chat {
     width: 70%;
-}
-
-/* left */
-
-.top-container {
-    height: 65px;
-    background-color: #eaeaea;
-}
-
-.top-container.left {
-     border-right: 1.5px solid rgba(191,191,191,0.5);
-}
-
-.bottom-container.left {
-    height: calc(100% - 65px);
+    height: 100%;
+    float: left;
     background: pink;
 }
 
-#notifiche {
-    height: 75px;
-    background: #8EDAFC;
+#header-chat {
+    width: 100%;
+    height: 60px;
+    background-color: #907a7a;
+}
+#message-area {
+    height: calc(100% - 120px);
+    background-color: seagreen;
+}
+#chat-input {
+    height: 60px;
+    background-color: #999898;
 }
 
-#search-bar {
-    height: 50px;
-    background: #eaeaea;
-}
+/* media query */
 
-#messaggi {
-    height: calc(100% - 125px);
-    overflow-y: auto;
-}
-
-/* rigth */
-#central-msg {
-    height: calc(100% - 80px - 65px);
-    overflow-y: auto;
-    background: #dfd6cf;
-}
-
-#footer {
-    height: 80px;
-    background: saddlebrown;
+@media (min-width:1400px) {
+    #all {
+        background: rgb(0, 150, 136);
+        background: linear-gradient(180deg, rgba(0, 150, 136, 1) 0, rgba(0, 150, 136, 1) 127px, #dddbd1 127px, #d2dbdc);
+        display: flex;
+    }
+    main {
+        width: 1400px;
+        height: 95vh;
+        margin: auto;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .06), 0 2px 5px 0 rgba(0, 0, 0, .2);
+    }
 }

@@ -4,14 +4,6 @@
     box-sizing: border-box;
 }
 
-.clearfix::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-
 #all {
     height: 100vh;
 }
@@ -35,21 +27,105 @@ main {
 #header-account {
     width: 100%;
     height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
     border-right: 1px solid rgba(0, 0, 0, 0.05);
     background-color: #ededed;  
 }
 
+.settings-account {
+    color: #919191;
+}
+
+.settings-account i {
+    padding: 0 15px;
+    font-size: 23px;
+}
+
+.img-account {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.img-account img{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}
+
+
 #desktop-notifications {
     background-color: #9de1fe;
     height: 90px;
+    display: flex;
+    align-items: center;
     cursor: pointer;
+    padding-left: 15px;
+}
+
+.bell {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 18px;
+    color: #9de1fe;
+}
+
+.text-notification {
+    font-size: 16px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.text-notification p {
+    padding: 5px;
+}
+
+.text-notification a {
+    padding: 5px;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 #search {
     height: 50px;
-    background: rgb(156, 34, 54);
-/*     background-color: #f7f7f7; */
+    padding: 6px 0;
+    background-color: #f7f7f7;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
 }
+
+.icon-search {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30px;
+    z-index: 2;
+}
+
+#user-search {
+    height: 34px;
+    width: 95%;
+    border: none;
+    border-radius: 18px;
+    margin: 0 2.5%;
+    font-size: 16px;
+    padding: 0 20px 0 70px;
+}
+
+#user-search:focus {
+    outline: none;
+}
+
 
 #utenti {
     height: calc(100% - 200px);
@@ -67,8 +143,9 @@ main {
 #header-chat {
     width: 100%;
     height: 60px;
-    background-color: #907a7a;
+    background-color: #ededed;  
 }
+
 #message-area {
     height: calc(100% - 120px);
     background-color: seagreen;

@@ -4,15 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <title>Boolzapp</title>
 </head>
 <body id="all">
   <main>
       <div class="container">
           <div id="account">
-              <div id="header-account"></div>
-              <div id="desktop-notifications"></div>
-              <div id="search"></div>
+              <div id="header-account">
+                  <div class="img-account">
+                    <img src="https://i.picsum.photos/id/1005/5760/3840.jpg?hmac=2acSJCOwz9q_dKtDZdSB-OIK1HUcwBeXco_RMMTUgfY" alt="accountimg">
+                  </div>
+                  <div class="settings-account">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+              </div>
+              <div id="desktop-notifications">
+                  <div class="bell">
+                      <i class="fas fa-bell-slash"></i>
+                  </div>
+                  <div class="text-notification">
+                      <p>Ricevi notifiche di nuovi messaggi</p>
+                      <a href="#">Attiva notifiche desktop</a>
+                  </div>
+              </div>
+              <div id="search">
+                  <div class="icon-search">
+                      <i class="fas fa-search"></i>
+                  </div>
+                  <input type="text" name="" id="user-search" placeholder="Cerca o inizia una nuova chat">
+              </div>
               <div id="utenti"></div>
           </div>
           <div id="chat">

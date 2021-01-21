@@ -390,3 +390,18 @@ main {
         box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .06), 0 2px 5px 0 rgba(0, 0, 0, .2);
     }
 }
+
+  .web_available{
+       display: none;
+       text-align: center;
+       padding-top: 20px;
+   }
+@media (max-width:600px) {
+   main{
+       display: none;
+   }
+   .web_available{
+       display: block;
+   }
+    
+}

@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>Boolzapp</title>
 </head>
 <body id="all">
+  
   <main>
       <div class="container">
           <div id="account">
               <div id="header-account">
                   <div class="img-account">
-                    <img src="https://i.picsum.photos/id/1005/5760/3840.jpg?hmac=2acSJCOwz9q_dKtDZdSB-OIK1HUcwBeXco_RMMTUgfY" alt="accountimg">
+                    <img src="https://i.picsum.photos/id/129/4910/3252.jpg?hmac=g1KzJMIp75lG_scR48R1baC6TjhVmkEyygSyngKYRsg" alt="accountimg">
                   </div>
                   <div class="settings-account">
                     <i class="fas fa-circle-notch"></i>
@@ -36,125 +38,36 @@
                   </div>
                   <input type="text" name="" id="user-search" placeholder="Cerca o inizia una nuova chat">
               </div>
+
+            
               <div id="users">
-                <div class="user active">
-                    <div class="user-img">
-                        <img src="https://i.picsum.photos/id/1074/5472/3648.jpg?hmac=w-Fbv9bl0KpEUgZugbsiGk3Y2-LGAuiLZOYsRk0zo4A" alt="img">
-                    </div>
-                    <div class="user-details">
-                        <span>Roberto</span>
-                        <span>Non poteva essere altrimenti</span>
-                    </div>
-                    <div class="time">
-                        <span>18:35</span>
-                    </div>
-                    
-                </div>
-                <div class="user">
-                    <div class="user-img">
-                        <img src="https://i.picsum.photos/id/129/4910/3252.jpg?hmac=g1KzJMIp75lG_scR48R1baC6TjhVmkEyygSyngKYRsg" alt="img">
-                    </div>
-                    <div class="user-details">
-                        <span>Valeria</span>
-                        <span>Non poteva essere altrimenti</span>
-                    </div>
-                    <div class="time">
-                        <span>18:35</span>
-                    </div>
-                    
-                </div>
-                <div class="user">
-                    <div class="user-img">
-                        <img src="https://i.picsum.photos/id/177/2515/1830.jpg?hmac=G8-2Q3-YPB2TreOK-4ofcmS-z5F6chIA0GHYAe5yzDY" alt="img">
-                    </div>
-                    <div class="user-details">
-                        <span>Cristina</span>
-                        <span>Non poteva essere altrimenti</span>
-                    </div>
-                    <div class="time">
-                        <span>18:35</span>
-                    </div>
-                    
-                </div>
-                <div class="user">
-                    <div class="user-img">
-                        <img src="https://i.picsum.photos/id/180/2400/1600.jpg?hmac=Ig-CXcpNdmh51k3kXpNqNqcDYTwXCIaonYiBOnLXBb8" alt="img">
-                    </div>
-                    <div class="user-details">
-                        <span>Alberto</span>
-                        <span>Non poteva essere altrimenti</span>
-                    </div>
-                    <div class="time">
-                        <span>18:35</span>
-                    </div>
-                    
-                </div>
-                <div class="user">
-                    <div class="user-img">
-                        <img src="https://i.picsum.photos/id/22/4434/3729.jpg?hmac=fjZdkSMZJNFgsoDh8Qo5zdA_nSGUAWvKLyyqmEt2xs0"
-                            alt="img">
-                    </div>
-                    <div class="user-details">
-                        <span>Alessandro B.</span>
-                        <span>Non poteva essere altrimenti</span>
-                    </div>
-                    <div class="time">
-                        <span>18:35</span>
-                    </div>
-                
-                </div>
-                <div class="user">
-                    <div class="user-img">
-                        <img src="https://i.picsum.photos/id/237/3500/2095.jpg?hmac=y2n_cflHFKpQwLOL1SSCtVDqL8NmOnBzEW7LYKZ-z_o"
-                            alt="img">
-                    </div>
-                    <div class="user-details">
-                        <span>Michele St.</span>
-                        <span>Non poteva essere altrimenti</span>
-                    </div>
-                    <div class="time">
-                        <span>18:35</span>
-                    </div>
-                
-                </div>
-                <div class="user">
-                    <div class="user-img">
-                        <img src="https://i.picsum.photos/id/24/4855/1803.jpg?hmac=ICVhP1pUXDLXaTkgwDJinSUS59UWalMxf4SOIWb9Ui4"
-                            alt="img">
-                    </div>
-                    <div class="user-details">
-                        <span>Alejandro Escamilla</span>
-                        <span>Non poteva essere altrimenti</span>
-                    </div>
-                    <div class="time">
-                        <span>18:35</span>
-                    </div>
-                
-                </div>
-                <div class="user">
-                    <div class="user-img">
-                        <img src="https://i.picsum.photos/id/325/4928/3264.jpg?hmac=D_X6AKqCcH8IpWElX5X3dxx11yn7yYO-vPhiKhzRbwI"
-                            alt="img">
-                    </div>
-                    <div class="user-details">
-                        <span>Carolina B.</span>
-                        <span>Non poteva essere altrimenti</span>
-                    </div>
-                    <div class="time">
-                        <span>18:35</span>
+                <div id="root">
+                    <div  v-for="(user,index) in users" class="user" :selected="true" >
+                        <div  class="user-img">
+                            <img :src="user.img" alt="img">
+                        </div>
+                        <div class="user-details">
+                            <span v-text="user.nome"></span>
+                            <span v-text="user.msg"></span>
+                        </div>
+                        <div class="time">
+                            <span v-text="user.last"></span>
+                        </div>
                     </div>
                 </div>
-              </div>
+            </div>
+
+
           </div>
           <div id="chat">
               <div id="header-chat">
                 <div class="chat-details">
                     <div class="chat-img">
-                        <img src="https://i.picsum.photos/id/325/4928/3264.jpg?hmac=D_X6AKqCcH8IpWElX5X3dxx11yn7yYO-vPhiKhzRbwI"
+                        <img src="https://i.picsum.photos/id/1005/5760/3840.jpg?hmac=2acSJCOwz9q_dKtDZdSB-OIK1HUcwBeXco_RMMTUgfY"
                             alt="img">
                     </div>
                     <div class="chat-account">
-                        <span>Carolina B.</span>
+                        <span>Carolina B</span>
                         <span>Ultimo accesso oggi alle 16:20</span>
                     </div>
                 </div>
@@ -165,19 +78,41 @@
                 </div>
               </div>
               <div id="message-area">
-                  <div class="chat-box"></div>
+                  <div class="chat-box">
+                      <div class="day-messages">
+                          <span>Oggi</span>
+                      </div>
+                      <div class="send-messages">
+                          <div class="send-message">
+                              <span>Ciao come stai?</span> 
+                            <div class="time-message">
+                                <small>16:25</small>
+                            </div>
+                          </div>
+                          
+                      </div>
+                            <div class="received-messages">
+                                <div class="received-message">
+                                    <span class="message-text">Bene</span>
+                                    <div class="time-message">
+                                        <small>16:25</small>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
               </div>
               <div id="chat-input">
                   <div class="emoji">
                       <i class="fas fa-laugh"></i>
                   </div>
-                  <input type="text" name="" id="input-text" placeholder="Scrivi un messaggio">
-                  <div>
-                      <i class="fas fa-microphone"></i>
+                  <input class="invio-messaggio" type="text" name="" id="input-text" placeholder="Scrivi un messaggio">
+                  <div class="icon-send">
+                      <i class="fab fa-telegram-plane" aria-hidden="true"></i>
                   </div>
-                </div>
+              </div>
           </div>
       </div>
   </main>
+  <script src="js/main.js"></script>
 </body>
 </html>
